@@ -221,6 +221,30 @@ const formatApiKey = (key, isVisible) => {
         {error && showNotification('error', error)}
 
         <div className="max-w-[1200px] mx-auto p-8">
+          {/* Add API Playground Link */}
+          <div className="flex justify-between items-center mb-6">
+            <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
+            <Link 
+              href="/api-playground"
+              className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <span>API Playground</span>
+              <svg 
+                className="w-4 h-4" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth="2" 
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </Link>
+          </div>
+
           {/* Current Plan Section */}
           <div className="mb-8 p-8 bg-gradient-to-r from-[#9333EA] via-[#EC4899] to-[#F97316] rounded-2xl">
             <div className="flex justify-between items-start">
